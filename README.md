@@ -1,4 +1,4 @@
-# vue-demo
+# qs-develop
 
 ## Project setup
 ```
