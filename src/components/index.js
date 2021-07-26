@@ -3,13 +3,15 @@ import RkmobileMouse from './mobileMouse.vue' // 鼠标拖动组件
 import RkmobileDrag from './mobileDrag.vue' // 拖动组件
 import RkFooter from './footer.vue'
 import RkHeader from './header.vue'
+import RkconfigBar from './configBar.vue'
 
 const components = {
     RkmodelTest,
     RkHeader,
     RkFooter,
     RkmobileMouse,
-    RkmobileDrag
+    RkmobileDrag,
+    RkconfigBar
 }
 
 export default {

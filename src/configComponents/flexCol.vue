@@ -1,11 +1,21 @@
 <template>
-    <div class="config-flex-col" @drop.stop="drop" @dragover.stop="allowDrop"></div>
+    <RkconfigBar :styleChange="styleChange">
+        <div class="config-flex-col" @drop.stop="drop" @dragover.stop="allowDrop"></div>
+    </RkconfigBar>
 </template>
 
 <script>
 import createEle from '../configComponents/createEle';
 
 export default {
+    data(){
+        return {
+            styleChange: {
+                width: '200px',
+                heigh: '100px'
+            }
+        }
+    },
     methods: {
         allowDrop(ev) {
             ev.preventDefault();
