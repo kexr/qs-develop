@@ -4,6 +4,7 @@ import RkmobileDrag from './mobileDrag.vue' // 拖动组件
 import RkFooter from './footer.vue'
 import RkHeader from './header.vue'
 import RKconfigBorder from './configBorder.vue'
+import RkconfigBar from './configBar.vue'
 
 const components = {
     RkmodelTest,
@@ -11,7 +12,8 @@ const components = {
     RkFooter,
     RkmobileMouse,
     RkmobileDrag,
-    RKconfigBorder
+    RKconfigBorder,
+    RkconfigBar
 }
 
 export default {

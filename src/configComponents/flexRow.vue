@@ -1,11 +1,20 @@
 <template>
-    <div class="config-flex-row" @drop.stop="drop" @dragover.stop="allowDrop"></div>
+    <RkconfigBar :value="styleChange">
+        <div class="config-flex-row" @drop.stop="drop" @dragover.stop="allowDrop"></div>
+    </RkconfigBar>
 </template>
 
 <script>
 import createEle from '../configComponents/createEle';
 
 export default {
+    data(){
+        return {
+            styleChange: {
+                height: '300px',
+            }
+        }
+    },
     methods: {
         allowDrop(ev) {
             ev.preventDefault();
@@ -25,7 +34,8 @@ export default {
 <style scoped>
     .config-flex-row {
         display: flex;
-        min-height: 100px;
+        height: 100%;
+        width: 100%;
         background-color: hsl(180deg 53% 80% / 22%);
     }
 </style>

@@ -1,27 +1,34 @@
 <template>
     <article 
-    class="rk-mobile-drag" 
     draggable="true"
     @dragstart="dragstart"
     @dragend="drop"
     :style="position"
+    :class="{hide: !isvisible, 'rk-mobile-drag': isvisible}"
     >
-        <header>组件库</header>
-		<slot></slot>
+		<slot v-if="isvisible"></slot>
+        <div v-else @click="$emit('update:isvisible', true)">+</div>
     </article>
 </template>
 
 <script>
 export default {
+    props: ['top','left', 'isvisible'],
     data(){
         return {
-            position: {
-                top: '50px',
-                left: '0px'
-            },
+            position: {},
             beforeX: '',
             beforeY: ''
         }  
+    },
+    created() {
+        var obj = {
+            top: this.top,
+            left: this.left
+        };
+        for(let key in obj){
+            this.$set(this.position, key, obj[key]);
+        }
     },
     methods: {
        dragstart(event) {
@@ -46,17 +53,26 @@ export default {
 </script>
 
 <style scoped>
-    .rk-mobile-drag{
+    article {
         background-color: #fff;
+        box-shadow: 0 2px 4px 0 #99cccc;
+        position: fixed;
+        transition-property: border-radius,width,height;
+        transition-duration: .5s;
+    }
+    .rk-mobile-drag{
         width: 170px;
         height: 400px;
-        position: fixed;
-        box-shadow: 0 2px 4px 0 #99cccc;
         border-radius: 5px;
     }
-    .rk-mobile-drag header{
-        height: 25px;
-        line-height: 25px;
-        border-bottom: 1px solid #d6d4d4;
+    .hide{
+        border-radius: 100px;
+        height: 50px;
+        width: 50px;
+        overflow: hidden;
+        cursor:pointer;
+    }
+    .hide div{
+        line-height: 45px;
     }
 </style>
