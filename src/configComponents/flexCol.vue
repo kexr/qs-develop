@@ -25,7 +25,7 @@ export default {
 <style scoped>
     .config-flex-col {
         display: flex;
-        width: 200px;
+        width: 25%;
         background-color: hsl(180deg 53% 80% / 22%);
         flex-direction: column;
     }

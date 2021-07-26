@@ -25,7 +25,7 @@ export default {
 <style scoped>
     .config-flex-row {
         display: flex;
-        min-height: 200px;
+        min-height: 100px;
         background-color: hsl(180deg 53% 80% / 22%);
     }
 </style>

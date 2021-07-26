@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" @focusout="filterHtmlTag">
     <RkHeader></RkHeader>
     <div class="center">
       <router-view />
@@ -16,7 +16,9 @@ export default {
 
   },
   methods: {
-
+    filterHtmlTag(ev){
+      ev.target.innerHTML = ev.target.innerText;
+    }
   }  
 }
 </script>
@@ -34,8 +36,8 @@ export default {
   flex-direction: column;
   height: 100%;
   background-color: #eff2f5;
-  font-variant-caps: unicase;
-  font-size: 20px;
+  font-variant-caps: normal;
+  font-size: 16px;
 }
 header,footer{
   height: 35px;
