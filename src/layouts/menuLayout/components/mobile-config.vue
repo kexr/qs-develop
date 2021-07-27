@@ -9,8 +9,7 @@
         <ul @dragstart.stop="drag" @dragend.stop=";">
             <li draggable="true" :data-elename="'RkFlexRow'">横向布局</li>
             <li draggable="true" :data-elename="'RkFlexCol'">纵向布局</li>
-            <li draggable="true" :data-elename="'RkTitleOne'">标题一</li>
-            <li draggable="true" :data-elename="'RkTitleTwo'">标题二</li>
+            <li draggable="true" :data-elename="'RkTitleOne'">标题</li>
             <li draggable="true" :data-elename="'RkTextp'">段落</li>
         </ul>
         <footer @click="isvisible = false" ref="hideBtn">

@@ -59,6 +59,7 @@ export default {
         position: fixed;
         transition-property: border-radius,width,height;
         transition-duration: .5s;
+        z-index: 199;
     }
     .rk-mobile-drag{
         width: 170px;

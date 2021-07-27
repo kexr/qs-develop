@@ -39,7 +39,6 @@ export default {
 <style scoped>
     .config-flex-col {
         display: flex;
-        background-color: hsl(180deg 53% 80% / 22%);
         flex-direction: column;
         width: 100%;
         height: 100%;

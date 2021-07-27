@@ -36,6 +36,5 @@ export default {
         display: flex;
         height: 100%;
         width: 100%;
-        background-color: hsl(180deg 53% 80% / 22%);
     }
 </style>
