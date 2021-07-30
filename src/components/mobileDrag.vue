@@ -63,7 +63,7 @@ export default {
     }
     .rk-mobile-drag{
         width: 170px;
-        height: 400px;
+        height: 200px;
         border-radius: 5px;
     }
     .hide{
