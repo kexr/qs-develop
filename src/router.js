@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-    mode: 'history',
+    // mode: 'history',
     base: './',
     routes: [
         {
@@ -16,16 +16,8 @@ export default new Router({
             component: () => import(/* webpackChunkName: "group-menu" */'./layouts/menuLayout/index'),
             children: [{
                 path: "one",
-                name: "one",
-                component: () => import(/* webpackChunkName: "group-menu" */'./view/one')
-            },{
-                path: "two",
-                name: "two",
+                name: "首页",
                 component: () => import(/* webpackChunkName: "group-menu" */'./view/two')
-            },{
-                path: "home",
-                name: "home",
-                component: () => import(/* webpackChunkName: "group-menu" */'./view/home')
             }]
         }
     ]

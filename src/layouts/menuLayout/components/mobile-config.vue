@@ -11,6 +11,7 @@
             <li draggable="true" :data-elename="'RkFlexCol'">纵向布局</li>
             <li draggable="true" :data-elename="'RkTitleOne'">标题</li>
             <li draggable="true" :data-elename="'RkTextp'">段落</li>
+            <li draggable="true" :data-elename="'RkImage'">图片</li>
         </ul>
         <footer @click="isvisible = false" ref="hideBtn">
             隐藏
